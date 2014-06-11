@@ -19,7 +19,10 @@ def sao_anagramas(frase1, frase2):
 
     # remover cada letra de frase1 de frase2, uma a uma da para fazer isso com
     # dica: parar remover apenas uma lestra, utilize frase2.replate('a','',1)
+    for letra_de_1 in frase1:
+        frase2=frase2.replace(letra_de_1,'',1)
 
+    return len(frase2)==0
 
 
 class AnagramaTests(unittest.TestCase):
